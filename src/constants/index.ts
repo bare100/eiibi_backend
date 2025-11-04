@@ -1,0 +1,6 @@
+export const DEFAULT_VAT = 19
+
+export const PAYMENT_NUMBER_CONFIG = {
+  NUMBER_MIN_LENGTH: 6,
+  STARTING_NUMBER: 1,
+}

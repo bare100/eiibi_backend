@@ -1,0 +1,18 @@
+export const DEFAULT_MULTI_LANGUAGE_OBJECT = {
+  en: '',
+  de: '',
+  es: '',
+  fr: '',
+  it: '',
+  ja: '',
+  ro: '',
+  ar: '',
+  hi: '',
+  pt: '',
+  ru: '',
+  tr: '',
+  zh: '',
+  hu: '',
+  pl: '',
+  uk: '',
+}

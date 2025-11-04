@@ -1,0 +1,15 @@
+.prettierignore
+**/*.json
+**/*.md
+**/*.svg
+**/*.mdx
+**/*.png
+**/*.jpg
+**/*.mp4
+*.html
+*.yml
+.next/
+*.env
+*.local
+sentry.properties
+.babelrc

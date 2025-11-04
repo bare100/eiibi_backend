@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "declaration": false,
+    "jsx": "preserve",                // Preserve JSX syntax in output
+    "moduleResolution": "node",
+    "lib": ["ES2020"],
+    "outDir": "dist",                 // Output directory for compiled files
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,                  // Allow JavaScript files to be compiled
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.css"
+  ],
+  "typeAcquisition": {
+    "enable": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "__tests__"
+  ]
+}

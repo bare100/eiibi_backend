@@ -1,0 +1,47 @@
+version: '3.7'
+services:
+  bazaryo_server:
+    container_name: suuqfuran2
+    build:
+      dockerfile: Dockerfile
+      context: .
+    working_dir: /app
+    volumes:
+      - ./:/app
+    env_file:
+      - .env
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/tmp/keys/keyfile.json
+    command: npm run dev
+    ports:
+      - ${PORT}:${PORT}
+      - 9229:9229
+    restart: unless-stopped
+    depends_on:
+      - bazaryo_postgres
+
+  bazaryo_postgres:
+    container_name: bazaryo_postgres
+    environment:
+      - POSTGRES_USER=bazaryo
+      - POSTGRES_PASSWORD=bazaryo
+      - POSTGRES_DB=bazaryo-dev
+      - POSTGRES_INITDB_ARGS:--encoding=UTF8 --lc-collate=C --lc-ctype=C
+
+    image: postgres:13-alpine
+    ports:
+      - ${POSTGRES_PORT_EXTERNAL}:5432
+    env_file: .env
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+    volumes:
+      - 'db-data2:/data/db'
+      # - ./postgres-setup.sh:/docker-entrypoint-initdb.d/init-postgres.sh
+
+volumes:
+  db-data2:
+    driver: local

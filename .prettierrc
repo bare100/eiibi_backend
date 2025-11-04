@@ -1,0 +1,17 @@
+{
+  "arrowParens": "always",
+  "parser": "typescript",
+  "printWidth": 100,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "overrides": [
+    {
+      "files": "*.svg",
+      "options": {
+        "parser": "html",
+        "semi": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "zip-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "node-scp": "^0.0.23",
+    "open": "^10.1.0",
+    "require-from-string": "^2.0.2",
+    "ssh2": "^1.16.0"
+  }
+}
