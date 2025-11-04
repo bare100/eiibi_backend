@@ -6,5 +6,5 @@ export const generateAnonymousEmail = () => {
     style: 'lowerCase',
   })
 
-  return `${prefix}@bazaryo.app`
+  return `${prefix}@eiibi.so`
 }
